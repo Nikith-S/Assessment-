@@ -1,0 +1,145 @@
+/* LoremSection.css */
+.lorem-section {
+  padding: 60px 20px;
+  background-color: #f0f8ff; /* Light blue background */
+  position: relative;
+  overflow: hidden;
+}
+
+.section-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 40px;
+}
+
+.text-content {
+  flex: 1;
+  z-index: 2;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.lorem-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lorem-heading {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.lorem-content {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative elements */
+.decorative-circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.1);
+  z-index: 1;
+}
+
+.circle-1 {
+  top: -100px;
+  right: -100px;
+}
+
+.circle-2 {
+  bottom: -150px;
+  left: -150px;
+  background: rgba(70, 130, 180, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .text-content, .image-content {
+    width: 100%;
+  }
+  
+  .lorem-heading {
+    text-align: center;
+  }
+  
+  .lorem-content {
+    text-align: center;
+  }
+  
+  .cta-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lorem-section {
+    padding: 40px 15px;
+  }
+  
+  .lorem-heading {
+    font-size: 28px;
+  }
+  
+  .decorative-circle {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .lorem-heading {
+    font-size: 24px;
+  }
+  
+  .lorem-content {
+    font-size: 15px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
