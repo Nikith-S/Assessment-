@@ -1,0 +1,168 @@
+/* DealOfTheDay.css */
+.deal-of-the-day {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0 10px;
+}
+
+.section-title {
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+}
+
+.view-all {
+  color: #4CAF50;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.deal-cards-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.deal-cards-container::-webkit-scrollbar {
+  height: 6px;
+  background-color: #f5f5f5;
+}
+
+.deal-cards-container::-webkit-scrollbar-thumb {
+  background-color: #4CAF50;
+  border-radius: 3px;
+}
+
+.deal-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.deal-image-container {
+  width: 100%;
+  height: 200px;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.deal-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #ff5252;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.deal-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.deal-info {
+  padding: 20px;
+}
+
+.deal-name {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.deal-brand {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.deal-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.deal-original-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .deal-of-the-day {
+    padding: 30px 15px;
+  }
+  
+  .section-title {
+    font-size: 24px;
+  }
+  
+  .deal-card {
+    min-width: 250px;
+  }
+  
+  .deal-image-container {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .deal-of-the-day {
+    padding: 25px 10px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+  
+  .deal-card {
+    min-width: 220px;
+  }
+  
+  .deal-image-container {
+    height: 160px;
+  }
+}

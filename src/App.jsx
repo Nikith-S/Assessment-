@@ -7,6 +7,7 @@ import ProductGrid from './components/ProductGrid/ProductGrid'
 import Membership from './components/Membership/Membership'
 import HealthConcerns from './components/HealthConcerns.jsx/HealthConcerns'
 import Footer from './components/footer/footer'
+import DealOfTheDay from './components/DealOfTheDay/DealOfTheDay'
 const App = () => {
   return (
  <div className="app">
@@ -16,6 +17,7 @@ const App = () => {
    <ProductGrid />
    <Membership />
    <HealthConcerns />
+   <DealOfTheDay />
    <Footer />
  </div>
   )

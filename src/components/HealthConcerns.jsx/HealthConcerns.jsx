@@ -13,26 +13,28 @@ const HealthConcerns = () => {
     { name: 'Liver Care', image: livercare },
     { name: 'Bone, Joint & Muscle Care', image: bonesjointscare },
     { name: 'Kidney Care', image: kidneycare },
-    // Add more concerns as needed
   ];
 
   return (
     <section className="health-concerns">
       <h2 className="section-title">Shop by Health Concerns</h2>
-      <div className="concerns-container">
-        <div className="concerns-scroll">
+      <div className="concerns-wrapper">
+        <div className="concerns-grid">
           {concerns.map((concern, index) => (
-            <div key={index} className="concern-item">
-              <img 
-                src={concern.image} 
-                alt={concern.name} 
-                className="concern-image"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextElementSibling.style.display = 'flex';
-                }}
-              />
-              <div className="image-fallback">{concern.name}</div>
+            <div key={index} className="concern-card">
+              <div className="image-container">
+                <img 
+                  src={concern.image} 
+                  alt={concern.name}
+                  className="concern-image"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextElementSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="image-fallback">{concern.name}</div>
+              </div>
+              <div className="concern-name">{concern.name}</div>
             </div>
           ))}
         </div>

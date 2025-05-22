@@ -10,107 +10,142 @@
   margin-bottom: 25px;
   color: #333;
   text-align: left;
+  padding-left: 2%;
 }
 
 /* PC Layout - Full Width Grid */
-.concerns-container {
+.concerns-wrapper {
   width: 100%;
   overflow: hidden;
 }
 
-.concerns-scroll {
+.concerns-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  padding: 0 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 0 2%;
 }
 
-/* Mobile Layout - Horizontal Scroll */
-@media (max-width: 1024px) {
-  .concerns-scroll {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 15px;
-    padding: 0 5%;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .concerns-scroll::-webkit-scrollbar {
-    display: none;
-  }
-
-  .concern-item {
-    scroll-snap-align: start;
-    flex: 0 0 160px;
-  }
-}
-
-.concern-item {
+.concern-card {
   background: white;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
-  min-height: 180px;
+  display: flex;
+  flex-direction: column;
 }
 
-.concern-item:hover {
+.concern-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.image-container {
+  width: 100%;
+  height: 140px;
+  position: relative;
+  background: #f0f0f0;
+}
+
 .concern-image {
   width: 100%;
-  height: 120px;
+  height: 100%;
   object-fit: cover;
 }
 
 .image-fallback {
   display: none;
-  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  background: #f0f0f0;
+}
+
+.concern-name {
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
   font-weight: 600;
   color: #333;
   background: white;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Mobile Layout - Horizontal Scroll */
 @media (max-width: 768px) {
   .health-concerns {
-    padding: 30px 5%;
+    padding: 30px 4%;
   }
   
   .section-title {
     font-size: 24px;
+    padding-left: 4%;
   }
   
-  .concern-item {
-    min-height: 160px;
+  .concerns-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding: 0 4% 15px;
+    -webkit-overflow-scrolling: touch;
   }
   
-  .concern-image,
-  .image-fallback {
-    height: 100px;
+  .concerns-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .concerns-grid::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 2px;
+  }
+  
+  .concern-card {
+    scroll-snap-align: start;
+    flex: 0 0 65%;
+    min-width: 65%;
+  }
+  
+  .image-container {
+    height: 120px;
+  }
+  
+  .concern-name {
+    font-size: 14px;
+    padding: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .health-concerns {
-    padding: 25px 5%;
+    padding: 25px 3%;
   }
   
   .section-title {
     font-size: 22px;
+    padding-left: 3%;
   }
   
-  .concern-item {
-    flex: 0 0 140px;
-    min-height: 140px;
+  .concern-card {
+    flex: 0 0 75%;
+    min-width: 75%;
+  }
+  
+  .image-container {
+    height: 100px;
   }
 }
