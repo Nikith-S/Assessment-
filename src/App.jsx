@@ -1,6 +1,7 @@
 import React from 'react' 
 import Header from './components/Header/Header'
 import './App.css'
+import './index.css'
 import HeroBanner from './components/HeroBanner/HeroBanner'
 import TopBrands from './components/TopBrands/TopBrands'
 import ProductGrid from './components/ProductGrid/ProductGrid'
