@@ -1,0 +1,101 @@
+/* Top Brands Section */
+.top-brands {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Section Title - Now Left Aligned */
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  padding: 0 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* Shared Brand Card Styles */
+.brand-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  min-width: 220px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin: 0 20px;
+}
+
+.brand-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.brand-logo {
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Desktop Full Width Row */
+.desktop-brands-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Mobile Carousel */
+.mobile-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.mobile-carousel-track {
+  display: flex;
+  will-change: transform;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .brand-card {
+    height: 150px;
+    min-width: 180px;
+    padding: 25px;
+    margin: 0 15px;
+  }
+  
+  .brand-logo {
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-card {
+    height: 120px;
+    min-width: 150px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  
+  .brand-logo {
+    max-height: 80px;
+  }
+}
